@@ -13,8 +13,8 @@ First you have to clone the repository to your desired location with:
 Beside this, you have to create an **config.json** file in the cloned directory, which will store the prefix and your bots token. The content should then look like this:
 
     {
-    "token":"Your_Bots_Token",
-    "prefix":"!"
+        "token":"Your_Bots_Token",
+        "prefix":"!"
     }
 
 ## Usage
