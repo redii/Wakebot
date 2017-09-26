@@ -1,0 +1,28 @@
+{
+  "name": "discord-wakebot",
+  "version": "1.0.0",
+  "description": "A simple Discord.js bot to wake up inactive or muted users on your server.",
+  "main": "wakebot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redii/discord-wakebot.git"
+  },
+  "keywords": [
+    "discord",
+    "discordjs",
+    "wakebot",
+    "javascript"
+  ],
+  "author": "redii",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/redii/discord-wakebot/issues"
+  },
+  "homepage": "https://github.com/redii/discord-wakebot#readme",
+  "dependencies": {
+    "discord.js": "^11.2.1"
+  }
+}
