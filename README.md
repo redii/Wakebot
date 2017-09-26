@@ -1,5 +1,5 @@
-# discord-wakebot
-A simple Discord.js bot to wake up inactive or muted users on your server.
+# discord-wakebot 0.1
+A simple Discord.js bot to wake up inactive or muted users on your server. The bot is at the moment in an very early stage of development, thats why it does not have any error handling.
 
 ## Installation
 To use the bot at current stage you have to create your own **config.json** file in the cloned directory. The content should look something like this:
