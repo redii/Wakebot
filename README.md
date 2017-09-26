@@ -14,7 +14,7 @@ Beside this, you have to create an **config.json** file in the cloned directory,
 
     {
     "token":"Your_Bots_Token",
-    "prefix":"!",
+    "prefix":"!"
     }
 
 ## Usage
