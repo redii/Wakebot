@@ -30,6 +30,8 @@ In order to work properly you have to **mention** the person you want to wake up
     └─────────────────────────────────────┘
     .
 
+You may also want to disablie the Discord Desktop Notifications since they pop up a bit laggy (just annoyed me a bit).
+
 ### Why this way?
 Since bots can not call real users, the only way to get any attention is to send them messages. The bot will send 5 messages, as shown above, to the specified user.
 
