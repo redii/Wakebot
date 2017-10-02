@@ -33,7 +33,7 @@ client.on("message", (message) => {
         message.reply("Your second Argument is invalid. Enter a number between 1 and 3.");
       }
 
-      fs.appendFile('logs.txt', message.author.username + " tried to wake up " + mentioned.user.username + "\n", function (err) {
+      fs.appendFile('logs.txt', "\n" + message.author.username + " tried to wake up " + mentioned.user.username, function (err) {
         if (err) throw err;
         console.log('Saved!');
       });
