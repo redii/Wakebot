@@ -11,26 +11,33 @@ client.on("message", (message) => {
   const command = args.shift().toLowerCase();
 
   if (command == "wake") {
-      var member = message.mentions.members.first();
+      var mentioned = message.mentions.members.first();
       
-      if (args[1] > 1 && args[1] < 4) {
+      if (args[1] >= 1 && args[1] < 4) {
         for (var i = 1; i <= args[1]; i++) {
-            member.send(".");
-            member.send("┌──────────────────────────┐");
-            member.send("├─ " + message.author.username + " tried to wake you up");
-            member.send("└──────────────────────────┘");
-            member.send(".");
+            mentioned.send(".");
+            mentioned.send("┌──────────────────────────┐");
+            mentioned.send("├─ " + message.author.username + " tried to wake you up");
+            mentioned.send("└──────────────────────────┘");
+            mentioned.send(".");
           }
+          message.reply(mentioned.user.username + " wurde angestupst.");
+      } else if (args[1] == undefined){
+        mentioned.send(".");
+        mentioned.send("┌──────────────────────────┐");
+        mentioned.send("├─ " + message.author.username + " tried to wake you up");
+        mentioned.send("└──────────────────────────┘");
+        mentioned.send(".");
+        message.reply(mentioned.user.username + " wurde angestupst.");
       } else {
-        member.send(".");
-        member.send("┌──────────────────────────┐");
-        member.send("├─ " + message.author.username + " tried to wake you up");
-        member.send("└──────────────────────────┘");
-        member.send(".");
+        message.reply("Your second Argument is invalid. Enter a number between 1 and 3.");
       }
 
-      message.reply(member.user.username + " wurde angestupst.");
-      console.log(message.author.username + " tried to wake up " + member.user.username);
+      fs.appendFile('logs.txt', message.author.username + " tried to wake up " + mentioned.user.username + "\n", function (err) {
+        if (err) throw err;
+        console.log('Saved!');
+      });
+      console.log(message.author.username + " tried to wake up " + mentioned.user.username);
   }
 });
 
