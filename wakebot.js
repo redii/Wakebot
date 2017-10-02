@@ -22,20 +22,16 @@ client.on("message", (message) => {
       // For a number between 1 and 3
       if (args[1] >= 1 && args[1] < 4) {
         for (var i = 1; i <= args[1]; i++) {
-            mentioned.send(".");
-            mentioned.send("┌──────────────────────────┐");
-            mentioned.send("├─ " + message.author.username + " tried to wake you up");
-            mentioned.send("└──────────────────────────┘");
-            mentioned.send(".");
+            mentioned.send("."); mentioned.send("."); mentioned.send("."); mentioned.send(".");
+            //mentioned.deleteDM();
+            mentioned.send(message.author.username + " tried to wake you up");
           }
           message.reply(mentioned.user.username + " wurde angestupst.");
       // If there is not second argument given
       } else if (args[1] == undefined){
-        mentioned.send(".");
-        mentioned.send("┌──────────────────────────┐");
-        mentioned.send("├─ " + message.author.username + " tried to wake you up");
-        mentioned.send("└──────────────────────────┘");
-        mentioned.send(".");
+        mentioned.send("."); mentioned.send("."); mentioned.send("."); mentioned.send(".");
+        //mentioned.deleteDM();
+        mentioned.send(message.author.username + " tried to wake you up");
         message.reply(mentioned.user.username + " wurde angestupst.");
       // If something bad was appended...
       } else {
