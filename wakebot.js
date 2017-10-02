@@ -17,19 +17,20 @@ client.on("message", (message) => {
         for (var i = 1; i <= args[1]; i++) {
             member.send(".");
             member.send("┌──────────────────────────┐");
-            member.send("├────── " + message.author.username + " tried to wake you up ─────┤");
+            member.send("├─ " + message.author.username + " tried to wake you up");
             member.send("└──────────────────────────┘");
             member.send(".");
           }
       } else {
         member.send(".");
         member.send("┌──────────────────────────┐");
-        member.send("├────── " + message.author.username + " tried to wake you up ─────┤");
+        member.send("├─ " + message.author.username + " tried to wake you up");
         member.send("└──────────────────────────┘");
         member.send(".");
       }
 
-      console.log(message.author.username + " tried to wake up ###");
+      message.reply(member.user.username + " wurde angestupst.");
+      console.log(message.author.username + " tried to wake up " + member.user.username);
   }
 });
 
