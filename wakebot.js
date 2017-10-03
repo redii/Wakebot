@@ -4,7 +4,12 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
 
-// Eventhandler for incoming messages
+// For Discord.js Errorhandling
+client.on("error", (e) => console.error(e));
+client.on("warn", (e) => console.warn(e));
+client.on("debug", (e) => console.info(e));
+
+/ Eventhandler for incoming messages
 client.on("message", (message) => {
 
   // If the message starts with right prefix...
