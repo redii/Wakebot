@@ -5,20 +5,6 @@ A simple Discord.js bot to wake up inactive or muted users on your server.
 
 **Demo:** Im currently hosting an instance of the bot on my own vps. To add the wakeBot to your server click [here](https://discordapp.com/oauth2/authorize?client_id=362303227871625219&scope=bot&permissions=1117184).
 
-## Installation
-Before we will clone this repository onto your device you need to make sure that git and node.js are installed. Now that everything set up, you have to clone this repository to your desired location with the following command:
-
-    git clone https://github.com/redii/discord-wakebot.git
-
-Beside this, you have to create/rename the **config.json** file in the cloned directory, which will store the prefix and your bots token for authentication. The content should then look like this:
-
-    {
-        "token":"Your_Bots_Token",
-        "prefix":"!"
-    }
-
-After finishing these first steps you should be able to run the bot by typing in the "node wakebot.js" command and execute it.
-
 ## Usage
 The bot currently supports only 2 different commands, !help and !wake. While the help command does not need any more arguments, the !wake command has to be used with the following syntax:
 
@@ -33,6 +19,22 @@ In order to work properly you have to **mention** the person you want to wake up
     xyz tried to wake you up.
 
 You may also want to disable the discord desktop notifications since they pop up a bit laggy (just annoyed me a bit).
+
+## Installation (Selfhosting)
+If you want to selfhost an instance of the bot on your own device you can do this by completing the following instructions. Before we will clone this repository onto your device you need to make sure **git and node.js** are installed and ready to use. 
+
+If you already done this or finished the installation you are now able to clone this repository with the following command:
+
+    git clone https://github.com/redii/discord-wakebot.git
+
+Beside this, you have to create/rename the **config.json** file in the cloned directory, which will store the prefix and your bots token for authentication. The content should then look like this:
+
+    {
+        "token":"Your_Bots_Token",
+        "prefix":"!"
+    }
+
+After finishing these steps you should be able to run the bot by typing in *"node wakebot.js"* and execute it.
 
 ## Logging
 In order to keep track of your instance of the bot, you can check the logs.txt file for some informations. While running, the bot should save wake-events and restarts in a logfile in your cloned directory. The file should look like this:
@@ -53,4 +55,4 @@ Another problem is that discord gives you a chat cooldown after 5 messages so yo
 ### To-Do
 * Delete spaceholder "." messages for clean chats
 * Delete the "xyz tried to wake you up" after a period of time
-* Add discord.js errorhandler to logging process in logs.txt
+* Add discord.js errorhandler to logging process in logs.txt (filter)
