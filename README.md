@@ -37,6 +37,8 @@ You may also want to disable the Discord desktop notifications since they pop up
 ## Logging
 In order to keep track of your instance of the bot, you can check the logs.txt file for some informations. While running, the bot should save wake-events and restarts in this logs.txt file in your cloned directory.
 
+## Repo Background
+
 ### Why this way?
 Since bots can not call real users, the only way to get any attention is to send them messages. The bot will send 5 messages, as shown above, to the specified user.
 
