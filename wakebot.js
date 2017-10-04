@@ -9,7 +9,7 @@ client.on("error", (e) => console.error(e));
 client.on("warn", (e) => console.warn(e));
 client.on("debug", (e) => console.info(e));
 
-/ Eventhandler for incoming messages
+// Eventhandler for incoming messages
 client.on("message", (message) => {
 
   // If the message starts with right prefix...
@@ -28,29 +28,25 @@ client.on("message", (message) => {
       if (args[1] >= 1 && args[1] < 4) {
         for (var i = 1; i <= args[1]; i++) {
             mentioned.send("."); mentioned.send("."); mentioned.send("."); mentioned.send(".");
-            //mentioned.deleteDM();
-            mentioned.send(message.author.username + " tried to wake you up");
+            //message.delete(1);
+            mentioned.send(message.author.username + " tried to wake you up.");
           }
-          message.reply(mentioned.user.username + " wurde angestupst.");
+          message.channel.send(mentioned.user.username + " wurde angestupst.");
       // If there is not second argument given
       } else if (args[1] == undefined){
         mentioned.send("."); mentioned.send("."); mentioned.send("."); mentioned.send(".");
-        //mentioned.deleteDM();
-        mentioned.send(message.author.username + " tried to wake you up");
-        message.reply(mentioned.user.username + " wurde angestupst.");
+        mentioned.send(message.author.username + " tried to wake you up.");
+        message.channel.send("Tried to wake up " + mentioned.user.username + ".");
       // If something bad was appended...
       } else {
-        message.reply("Your second Argument is invalid. Enter a number between 1 and 3.");
+        message.channel.send("Your second Argument is invalid. Enter a number between 1 and 3.");
       }
 
       // Write log entry for every poke the bot does
-      fs.appendFile('logs.txt', "\n" + message.author.username + " tried to wake up " + mentioned.user.username, function (err) {
+      fs.appendFile('logs.txt', "\n[" + command + "] [" + Date.now() + "] " + message.author.username + " -> "  + mentioned.user.username, function (err) {
         if (err) throw err;
-        console.log('Saved!');
+        console.log("[" + command + "] [" + Date.now() + "] [" + message.author.username + " -> " + mentioned.user.username + "] Saved event to logs.txt");
       });
-
-      // Console log for live output
-      console.log(message.author.username + " tried to wake up " + mentioned.user.username + " at " + Date.now());
   }
 });
 
