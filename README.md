@@ -10,7 +10,7 @@ The bot currently supports only 2 different commands, !help and !wake. While the
 
     !wake @xyz#1234 <1-3>
 
-In order to work properly you have to **mention** the person you want to wake up. The bot will then quickly try to wake up the specified person through messages in direct chat. If the person wont react, you can poke him a bit more with adding an number between 1 and 3 as second argument, so the bot will send the messages multiple times. The output should be something like this:
+In order to work properly you have to **mention** the person you want to wake up. The bot will then quickly try to wake up the specified person through messages in direct chat. If the person wont react, you can poke him a bit more with adding a number between 1 and 3 as second argument, so the bot will send the messages multiple times. The output should be something like this:
 
     .
     .
@@ -20,10 +20,10 @@ In order to work properly you have to **mention** the person you want to wake up
 
 You may also want to disable the discord desktop notifications since they pop up a bit laggy (just annoyed me a bit).
 
-## Installation (Selfhosting)
+## Installation (Selfhosting on Ubuntu)
 If you want to selfhost an instance of the bot on your own device you can do this by completing the following instructions. Before we will clone this repository onto your device you need to make sure **git and node.js** are installed and ready to use. 
 
-If you already done this or finished the installation you are now able to clone this repository with the following command:
+After finishing the installation you are now able to clone this repository using the following command:
 
     git clone https://github.com/redii/discord-wakebot.git
 
@@ -34,7 +34,7 @@ Beside this, you have to create/rename the **config.json** file in the cloned di
         "prefix":"!"
     }
 
-After finishing these steps you should be able to run the bot by typing in *"node wakebot.js"* and execute it.
+Now you should be able to start up the bot by typing in *"node wakebot.js"* and execute it.
 
 ## Logging
 In order to keep track of your instance of the bot, you can check the logs.txt file for some informations. While running, the bot should save wake-events and restarts in a logfile in your cloned directory. The file should look like this:
