@@ -11,10 +11,10 @@ client.on("debug", (e) => console.info(e));
 
 // Eventhandler for ready status
 client.on('ready', () => {
-  console.log("[bot] [" + Date.now() + "] The bots status is set to ready.");
+  console.log("\n[bot] [" + Date.now() + "] The bots status is set to ready.");
   client.user.setGame('!help | v0.1');
 
-  fs.appendFile('logs.txt', "\n[bot] [" + Date.now() + "] The bots status is set to ready.", function (err) {
+  fs.appendFile('logs.txt', "\n\n[bot] [" + Date.now() + "] The bots status is set to ready.", function (err) {
     if (err) throw err;
   });
 })
