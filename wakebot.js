@@ -9,17 +9,32 @@ client.on("error", (e) => console.error(e));
 client.on("warn", (e) => console.warn(e));
 client.on("debug", (e) => console.info(e));
 
+// Eventhandler for ready status
+client.on('ready', () => {
+  console.log("[bot] [" + Date.now() + "] The bots status is set to ready.");
+  client.user.setGame('!help | v0.1');
+
+  fs.appendFile('logs.txt', "\n[bot] [" + Date.now() + "] The bots status is set to ready.", function (err) {
+    if (err) throw err;
+  });
+})
+
 // Eventhandler for incoming messages
 client.on("message", (message) => {
 
-  // If the message starts with right prefix...
+  // If the message doesnt start with right prefix return
   if (!message.content.startsWith(config.prefix) || message.author.bot) return;
-  
+
   // Create command variable and args array for easy use
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
-  // If command is wake do...
+  // If command equals help do...
+  if (command == "help") {
+    message.channel.send("Please type in !wake @xyz#1234 <1-3> to use the bot properly.");
+  }
+
+  // If command equals wake do...
   if (command == "wake") {
       var mentioned = message.mentions.members.first();
      
