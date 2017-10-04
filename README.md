@@ -35,9 +35,15 @@ In order to work properly you have to **mention** the person you want to wake up
 You may also want to disable the Discord desktop notifications since they pop up a bit laggy (just annoyed me a bit).
 
 ## Logging
-In order to keep track of your instance of the bot, you can check the logs.txt file for some informations. While running, the bot should save wake-events and restarts in this logs.txt file in your cloned directory.
+In order to keep track of your instance of the bot, you can check the logs.txt file for some informations. While running, the bot should save wake-events and restarts in this logs.txt file in your cloned directory. The file should then look like this
 
-## Repo Background
+    ...
+    [bot] [1507107732492] The bots status is set to ready.
+    [wake] [1507107753213] abc -> xyz
+    [wake] [1507107761077] xyz -> qwe
+    ...
+
+## Extras
 
 ### Why this way?
 Since bots can not call real users, the only way to get any attention is to send them messages. The bot will send 5 messages, as shown above, to the specified user.
