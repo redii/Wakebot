@@ -31,13 +31,31 @@ client.on("message", (message) => {
 
   // If command equals help do...
   if (command == "help") {
-    message.channel.send("Please type in !wake @xyz#1234 <1-3> to use the bot properly.");
+    message.channel.send("Hello and welcome :)\nThank you for using the bot! There are currently 3 supported commands:");
+    message.channel.send("- help (where you are currently in...)\n- wake (the main function of this bot)\n- admin (bot owner only)");
+    message.channel.send("\n\nYou can use the wake command by following this syntax\n!wake @xyz#1234 <1-3>");
+    message.channel.send("\nBy typing in this message, the bot will poke the mentioned user multiplied by the optional second argument.");
+  }
+
+  // If command equals admin do...
+  if (command == "admin") {
+    if (message.author.id == config.ownerID) {
+      message.channel.send("You are the bot owner!");
+      if (args[0] == "prefix") {
+        message.reply("enter a prefix");
+      }
+    } else {
+      message.channel.send("You are not the bot owner! Set your ClientID in the config.json file if you are indeed the owner.");
+    }
+    
   }
 
   // If command equals wake do...
   if (command == "wake") {
-      var mentioned = message.mentions.members.first();
-     
+    var mentioned = message.mentions.members.first();
+
+    // If the message contains a mention do...
+    if (message.mentions.members.first() != undefined) {
       // Some if querys for second argument
       // For a number between 1 and 3
       if (args[1] >= 1 && args[1] < 4) {
@@ -62,6 +80,7 @@ client.on("message", (message) => {
         if (err) throw err;
         console.log("[" + command + "] [" + Date.now() + "] [" + message.author.username + " -> " + mentioned.user.username + "] Saved event to logs.txt");
       });
+    }
   }
 });
 

@@ -1,0 +1,18 @@
+
+
+[bot] [1507152264840] The bots status is set to ready.
+[wake] [1507152274047] redii -> redii
+
+[bot] [1507152390777] The bots status is set to ready.
+
+[bot] [1507153006421] The bots status is set to ready.
+
+[bot] [1507153117471] The bots status is set to ready.
+
+[bot] [1507227069531] The bots status is set to ready.
+
+[bot] [1507227289280] The bots status is set to ready.
+[wake] [1507227295551] redii -> redii
+
+[bot] [1507227395234] The bots status is set to ready.
+[wake] [1507227410394] redii -> redii
