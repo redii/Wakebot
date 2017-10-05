@@ -6,11 +6,14 @@ A simple Discord.js bot to wake up inactive or muted users on your server.
 **Demo:** Im currently hosting an instance of the bot on my own vps. To add the wakeBot to your server click [here](https://discordapp.com/oauth2/authorize?client_id=362303227871625219&scope=bot&permissions=1117184).
 
 ## Usage
-The bot currently supports only 2 different commands, !help and !wake. While the help command does not need any more arguments, the !wake command has to be used with the following syntax:
+The bot currently support 3 different commands with the following syntaxes:
+* help ..................... !help
+* wake .................... !wake @xyz#1234 <1-3>
+* admin
+  - prefix .......... !admin prefix <new_prefix>
 
-    !wake @xyz#1234 <1-3>
-
-In order to work properly you have to **mention** the person you want to wake up. The bot will then quickly try to wake up the specified person through messages in direct chat. If the person wont react, you can poke him a bit more with adding a number between 1 and 3 as second argument, so the bot will send the messages multiple times. The output should be something like this:
+### !wake Command
+To use the wake command type in the prefix + command (!wake) and a **mention** of the person you want to wake up. It should look like the sample syntax above. After sending the message the bot will try to wake up the specified person through messages in direct chat. If the person wont react, you can poke him a bit more by adding a number between 1 and 3 as second argument, so the bot will send the messages multiple times. The output should be something like this:
 
     .
     .
