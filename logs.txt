@@ -16,3 +16,5 @@
 
 [bot] [1507227395234] The bots status is set to ready.
 [wake] [1507227410394] redii -> redii
+
+[bot] [1507228005545] The bots status is set to ready.

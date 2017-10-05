@@ -84,6 +84,8 @@ client.on("message", (message) => {
         if (err) throw err;
         console.log("[" + command + "] [" + Date.now() + "] [" + message.author.username + " -> " + mentioned.user.username + "] Saved event to logs.txt");
       });
+    } else {
+      message.channel.send("Please enter a mention so the bot can understand who you want to wake up.");
     }
   }
 });
