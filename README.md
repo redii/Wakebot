@@ -31,7 +31,8 @@ Beside this, you have to create/rename the **config.json** file in the cloned di
 
     {
         "token":"Your_Bots_Token",
-        "prefix":"!"
+        "prefix":"!",
+        "ownerID":"Your_ClientID"
     }
 
 Now you should be able to start up the bot by typing in *"node wakebot.js"* and execute it.

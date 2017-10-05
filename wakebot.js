@@ -40,9 +40,13 @@ client.on("message", (message) => {
   // If command equals admin do...
   if (command == "admin") {
     if (message.author.id == config.ownerID) {
-      message.channel.send("You are the bot owner!");
       if (args[0] == "prefix") {
-        message.reply("enter a prefix");
+        if (args[1] != undefined) {
+          config.prefix = args[1];
+          message.channel.send("The Bots Prefix was changed to: " + args[1] + ".");
+        } else {
+          message.channel.send("Please enter a valid new prefix.");
+        }
       }
     } else {
       message.channel.send("You are not the bot owner! Set your ClientID in the config.json file if you are indeed the owner.");
@@ -84,5 +88,5 @@ client.on("message", (message) => {
   }
 });
 
-// Bot login using the bots token
+// Bot login using the config.token var
 client.login(config.token);
