@@ -24,13 +24,25 @@ To use the wake command type in the prefix + command (!wake) and a **mention** o
 You may also want to disable the discord desktop notifications since they pop up a bit laggy (just annoyed me a bit).
 
 ## Installation (Selfhosting on Ubuntu)
-If you want to selfhost an instance of the bot on your own device you can do this by completing the following instructions. Before we will clone this repository onto your device you need to make sure **git and node.js** are installed and ready to use. 
+If you want to selfhost an instance of the bot on your own device you can do this by completing the following instructions. I currently only have a Ubuntu server so this quick guide is only for those who also have ubuntu available. Before we will clone this repository onto your vps we need to make sure **git and node.js** are installed and ready to use. We will add a new user and than install all dependencies:
 
-After finishing the installation you are now able to clone this repository using the following command:
+    adduser wakebot
+    apt-get install git nodejs nano
 
+After finishing the installation you are now able to clone this repository. But before we do this we have to decide where the bot should be located. We will install the bot in the home folder of the wakebot user with the following commands:
+
+    su wakebot
+    cd
     git clone https://github.com/redii/discord-wakebot.git
 
-Beside this, you have to create/rename the **config.json** file in the cloned directory, which will store the prefix and your bots token for authentication. The content should then look like this:
+After successfully copying the repository, you have to rename the **config.json** file, which will store the prefix, your bots token for authentication and your own ClientID to determine yourself as the bots owner. We will do this be typing in:
+
+    cd discord-wakebot/
+    mv config.json.sample config.json
+    nano config.json
+    And enter your desired configurations.
+
+The config.json content should then look like this (with your entered credentials):
 
     {
         "token":"Your_Bots_Token",
