@@ -3,6 +3,10 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
 
+client.on("ready", (ready) => {
+  client.user.setPresence({ status: 'online', game: { name: '!help | Version 0.1' } });
+});
+
 client.on("message", (message) => {
 
   if (!message.content.startsWith(config.prefix) || message.author.bot) return;
