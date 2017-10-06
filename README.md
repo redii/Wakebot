@@ -13,7 +13,9 @@ The bot currently support 3 different commands with the following syntaxes:
   - prefix .......... !admin prefix <new_prefix>
 
 ### !wake Command
-To use the wake command type in the prefix + command (!wake) and a **mention** of the person you want to wake up. It should look like the sample syntax above. After sending the message the bot will try to wake up the specified person through messages in direct chat. If the person wont react, you can poke him a bit more by adding a number between 1 and 3 as second argument, so the bot will send the messages multiple times. The output should be something like this:
+To use the wake command type in the prefix + command (!wake) and a **mention** of the person you want to wake up. It should look like the sample syntax above. After sending the message the bot will try to wake up the specified person through messages in direct chat. 
+
+If the person wont react, you can poke him a bit more by adding a number between 1 and 3 as second argument, so the bot will send the messages multiple times. The output should be something like this:
 
     .
     .
