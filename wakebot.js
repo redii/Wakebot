@@ -4,12 +4,6 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
 
-<<<<<<< HEAD
-client.on("ready", (ready) => {
-  client.user.setPresence({ status: 'online', game: { name: '!help | Version 0.1' } });
-});
-
-=======
 // For Discord.js Errorhandling
 client.on("error", (e) => console.error(e));
 client.on("warn", (e) => console.warn(e));
@@ -26,7 +20,6 @@ client.on('ready', () => {
 })
 
 // Eventhandler for incoming messages
->>>>>>> origin/master
 client.on("message", (message) => {
 
   // If the message doesnt start with right prefix return
