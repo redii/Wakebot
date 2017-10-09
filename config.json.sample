@@ -1,4 +1,5 @@
 {
 	"token":"Your_Bots_Token",
-	"prefix":"!"
+	"prefix":"!",
+    "ownerID":"Your_ClientID"
 }
