@@ -59,7 +59,7 @@ client.on("message", (message) => {
     var mentioned = message.mentions.members.first();
 
     // If the message contains a mention do...
-    if (message.mentions.members.first() != undefined) {
+    if (mentioned != undefined) {
       // Some if querys for second argument
       // For a number between 1 and 3
       if (args[1] >= 1 && args[1] < 4) {
