@@ -1,4 +1,4 @@
-# discord-wakebot 
+# Wakebot for Discord
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![GitHub version](https://badge.fury.io/gh/redii%2Fdiscord-wakebot.svg)](https://badge.fury.io/gh/redii%2Fdiscord-wakebot)
 
 A simple Discord.js bot to wake up inactive or muted users on your server.
